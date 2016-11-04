@@ -1,0 +1,12 @@
+{
+  "debug": "true",
+  "token": "xxxx-XXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXX",
+  "super_admin": [
+    "U27LHFWHM"
+  ],
+  "channel_admin": {
+    "D28A5GQLV": "U27LHFWHM",
+    "C28A7MGQ0": "U27LHFWHM"
+  },
+  "print_stack_trace":"true"
+}

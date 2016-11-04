@@ -1,0 +1,19 @@
+{
+  "name": "slack-commander",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^3.6.0",
+    "ascii-table": "0.0.9",
+    "jsonfile": "2.3.1",
+    "quick-local-ip": "^1.0.7",
+    "roll": "^1.1.0",
+    "uuid": "2.0.3"
+  }
+}
