@@ -1,10 +1,11 @@
 var AbstractCommand = class AbstractCommand {
 
-    constructor(tag, commandRegex, helpCommandName, helpCommandText) {
+    constructor(tag, commandRegex, helpCommandName, helpCommandText, helpCommandTextDetailed) {
         this.TAG = tag;
         this.commandRegex = commandRegex;
         this.helpCommandName = helpCommandName;
         this.helpCommandText = helpCommandText;
+        this.helpCommandTextDetailed = helpCommandTextDetailed;
     }
 
     adminOnly() {

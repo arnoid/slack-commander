@@ -1,11 +1,12 @@
 var AbstractCommand = require('./AbstractCommand.js');
+var LineSplitter = require('../util/LineSplitter.js');
 
 var regex = /^help$/;
 
 var HelpCommand = class HelpCommand extends AbstractCommand {
 
     constructor() {
-        super("HELP COMMANDS:", regex,'help','Shows this help');
+        super("HELP COMMANDS:", regex, 'help', 'Shows this help');
     }
 
     adminOnly() {
@@ -38,7 +39,14 @@ var HelpCommand = class HelpCommand extends AbstractCommand {
                 commandText = command.helpCommandText;
             }
 
-            table.addRow(commandName, command.adminOnly(), command.channelAdminOnly(), commandText);
+            LineSplitter.split(commandText).forEach((line, index) => {
+                if (index === 0) {
+                    table.addRow(commandName, command.adminOnly(), command.channelAdminOnly(), line);
+                } else {
+                    table.addRow('', '', '', line);
+                }
+            });
+
         });
 
         BOT.send("```" + table.toString() + "```", message.channel);

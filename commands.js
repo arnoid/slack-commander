@@ -10,7 +10,7 @@ var Commands = class Commands {
 
             setChannelAdmin: new (require('./commands/channel/ConfigSetChannelAdmin.js'))(),
             showChannelAdmin: new (require('./commands/channel/ConfigShowChannelAdmin.js'))(),
-        }
+        };
     }
 
     findByText(commandText) {
